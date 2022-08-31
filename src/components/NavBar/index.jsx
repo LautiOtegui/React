@@ -1,12 +1,27 @@
 import React from 'react';
 import CartWidget from '../CartWidget';
+import Select from '../Select';
 import './style.css';
+import logo from '../../img/logo.png'
+import { useState } from 'react';
+
+
 
 const NavBar = () => {
+
+    const [navColor, setNavColor] = useState("#f3f3f3")
+
+    const onChangeColor = (event) => {
+        const color = event.target.value;
+        setNavColor(color)
+    }
+
+    console.log(navColor);
     return(
         <>
 
     <nav>
+    <img className='logo_nav' src={logo}/>
         <ul>
             <li>Home</li>
             <li>Production</li>
@@ -15,7 +30,7 @@ const NavBar = () => {
             <CartWidget/>
         </ul>
     </nav>
-    
+    <Select handleColor={onChangeColor}/>
     </>)
 }
 

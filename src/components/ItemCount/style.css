@@ -1,0 +1,19 @@
+.cart-button{
+    position: relative;
+    top: 5rem;
+    width: 80px;
+    height: 50px;
+    right: 0.8rem;
+    cursor: pointer;
+}
+.less-button{
+    position: relative;
+    font-weight: 900;
+    cursor: pointer;
+}
+.more-button{
+    position: relative;
+    font-weight: 900;
+    left: 2.5rem;
+    cursor: pointer;
+}
