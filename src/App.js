@@ -1,12 +1,13 @@
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/containers/ItemListContainer';
+import ItemListContainer from './containers/ItemListContainer';
 function App() {
 
   const categories = ["Production", "Drumkits"]
   return (
   <>
     <NavBar categories={categories}/>
-    <ItemListContainer greeting={"Sounds From the Universe"}/>
+    <div><ItemListContainer greeting={"Sounds From the Universe"}/></div>
+    
 
 
   </>);

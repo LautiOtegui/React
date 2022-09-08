@@ -21,7 +21,7 @@ const NavBar = () => {
         <>
 
     <nav>
-    <img className='logo_nav' src={logo}/>
+    <img className='logo_nav' alt='drumkit' src={logo}/>
         <ul>
             <li>Home</li>
             <li>Production</li>
