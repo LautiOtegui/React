@@ -2,11 +2,11 @@ import NavBar from './components/NavBar';
 import ItemListContainer from './containers/ItemListContainer';
 function App() {
 
-  const categories = ["Production", "Drumkits"]
+  const categories = ["Products", "Shoes"]
   return (
   <>
     <NavBar categories={categories}/>
-    <div><ItemListContainer greeting={"Sounds From the Universe"}/></div>
+    <div><ItemListContainer greeting={"Shipment Shoes"}/></div>
     
 
 
