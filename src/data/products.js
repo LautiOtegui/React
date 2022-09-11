@@ -1,7 +1,10 @@
 export const products = [
-    { id: 1, description: "Descripción 1", name: "Name 1", stock: 10 },
-    { id: 2, description: "Descripción 2", name: "Name 2", stock: 8 },
-    { id: 3, description: "Descripción 3", name: "Name 3", stock: 4 },
-    { id: 4, description: "Descripción 4", name: "Name 4", stock: 15 },
-    { id: 5, description: "Descripción 5", name: "Name 5", stock: 21 }
+    { id: 1, price: "$100", name: "Nike Dunk Low Grey", stock: 10 },
+    { id: 2, price: "$300", name: "New Balance 550 'Sea Salt Black'", stock: 8 },
+    { id: 3, price: "$1650", name: "Nike Air Force 1 Low Off White", stock: 4 },
+    { id: 4, price: "$90", name: "Nike Blazer Mid '77 Jumbo", stock: 15 },
+    { id: 5, price: "$329", name: "Adidas Yeezy 500 Black", stock: 21 },
+    { id: 6, price: "$362", name: "Nike Hot Step Air Terra", stock: 21 },
+    { id: 7, price: "$92", name: "Vans Old Skool 'Flames'", stock: 21 },
+    { id: 8, price: "$340", name: "Jordan 11 Retro Low Cool Grey", stock: 21 },
 ];

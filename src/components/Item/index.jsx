@@ -18,13 +18,14 @@ const Item = ({product}) => {
 						<div className="col-md-6 col-lg-4 col-xl-3">
 								<div id="product-1" class="single-product">
 										<div class="part-1">
-
 										</div>
 										<div className="part-2">
-												<h3 className="product-title">Nike Dunk Low Grey</h3>
-												<h4 className="product-price">$100</h4>
+												<h3 className="product-title">{product.name}</h3>
+												<h4 className="product-price">{product.price}</h4>
+												
 										</div>
 								</div>
+								<button>ADD TO CART</button>
 						</div>
 						
 						<div className="col-md-6 col-lg-4 col-xl-3">
@@ -40,6 +41,7 @@ const Item = ({product}) => {
 
 										</div>
 								</div>
+								<button className='button-two'>ADD TO CART</button>
 						</div>
 						
 						<div className="col-md-6 col-lg-4 col-xl-3">
@@ -52,6 +54,7 @@ const Item = ({product}) => {
 												<h4 className="product-price">$1650</h4>
 										</div>
 								</div>
+								<button>ADD TO CART</button>
 						</div>
 						
 						<div className="col-md-6 col-lg-4 col-xl-3">
@@ -65,6 +68,7 @@ const Item = ({product}) => {
 												<h4 className="product-price">$90</h4>
 										</div>
 								</div>
+								<button>ADD TO CART</button>
 						</div>
 						
 						<div className="col-md-6 col-lg-4 col-xl-3">
@@ -77,6 +81,7 @@ const Item = ({product}) => {
 												<h4 className="product-price">$329</h4>
 										</div>
 								</div>
+								<button>ADD TO CART</button>
 						</div>
 						
 						<div className="col-md-6 col-lg-4 col-xl-3">
@@ -91,6 +96,7 @@ const Item = ({product}) => {
 												<h4 className="product-price">$362</h4>
 										</div>
 								</div>
+								<button>ADD TO CART</button>
 						</div>
 						
 						<div className="col-md-6 col-lg-4 col-xl-3">
@@ -104,6 +110,7 @@ const Item = ({product}) => {
 												<h4 className="product-price">$92</h4>
 										</div>
 								</div>
+								<button>ADD TO CART</button>
 						</div>
 						
 						<div className="col-md-6 col-lg-4 col-xl-3">
@@ -118,6 +125,7 @@ Cool Grey</h3>
 												<h4 className="product-price">$340</h4>
 										</div>
 								</div>
+								<button>ADD TO CART</button>
 						</div>
 				</div>
 		</div>
