@@ -2,7 +2,6 @@ import React from 'react';
 import CartWidget from '../CartWidget';
 import './style.css';
 import logo from '../../img/logo.jpg'
-import { useState } from 'react';
 
 
 

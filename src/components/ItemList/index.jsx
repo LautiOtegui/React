@@ -1,14 +1,23 @@
-import React from 'react'
-import Item from '../Item'
-
+import React, { useState } from "react";
+import Item from "../Item"
+import Modal from '../Modals';
+import './style.css'
 const ItemList = ({products}) => {
-    return (
-    <div>
-        {products.map(product => {
-            return <Item key={product.id} product={product}/>
-        })}
-    </div>
-    )
-}
 
-export default ItemList
+    const [modalShow, setModalShow] = useState(true);
+
+    return (
+        <div className='item-container'>
+            {products.length ? products.map(product => {
+                return <Item key={product.id} product={product}/>
+            })
+            :
+            <h2>Loading...</h2>
+        }
+        { modalShow ? <Modal handleClose={setModalShow}/> : null}
+        </div>
+    )
+    }
+
+
+export default ItemList;
