@@ -1,4 +1,3 @@
-
 import NavBar from './components/NavBar';
 import ItemDetailContainer from './containers/ItemDetailContainer';
 import ItemListContainer from './containers/ItemListContainer';
@@ -10,12 +9,13 @@ import {
 import NotFound from './components/NotFound';
 import Cart from './containers/CartContainer';
 import './App.css'
+import ShopProvider from './context/ShopProvider';
 
 function App() {
 
-  // const categorias = ["Electronics", "Audio & Video", "Clothing"]
 
   return (
+  <ShopProvider>
     <BrowserRouter>
       <NavBar />      
       <Routes>
@@ -26,6 +26,7 @@ function App() {
         <Route path="*" element={<NotFound/>}/>
       </Routes>
     </BrowserRouter>
+  </ShopProvider>
   );
 }
 export default App;

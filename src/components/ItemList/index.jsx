@@ -1,23 +1,29 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { Shop } from '../../context/ShopProvider';
 import Item from "../Item"
-import Modal from '../Modals';
 import './style.css'
-const ItemList = ({products}) => {
 
-    const [modalShow, setModalShow] = useState(true);
 
-    return (
-        <div className='item-container'>
-            {products.length ? products.map(product => {
-                return <Item key={product.id} product={product}/>
-            })
-            :
-            <h2>Loading...</h2>
+    const ItemList = ({products}) => {
+
+        const {setMensaje} = useContext(Shop);
+
+        const onChangeMensaje = () => {
+            setMensaje("Chau")
         }
-        { modalShow ? <Modal handleClose={setModalShow}/> : null}
-        </div>
+
+return (
+    <div className='item-container'>
+        {products.length ? products.map(product => {
+            return <Item key={product.id} product={product}/>
+        })
+        :
+        <h2>Loading...</h2>
+        }
+        <button onClick={onChangeMensaje}>Cambiar mensaje NavBar</button>
+    </div>
     )
-    }
+}
 
 
 export default ItemList;
