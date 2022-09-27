@@ -1,16 +1,9 @@
-import React, { useContext } from "react";
-import { Shop } from '../../context/ShopProvider';
+import React from "react";
 import Item from "../Item"
 import './style.css'
 
 
     const ItemList = ({products}) => {
-
-        const {setMensaje} = useContext(Shop);
-
-        const onChangeMensaje = () => {
-            setMensaje("Chau")
-        }
 
 return (
     <div className='item-container'>
@@ -20,7 +13,6 @@ return (
         :
         <h2>Loading...</h2>
         }
-        <button onClick={onChangeMensaje}>Cambiar mensaje NavBar</button>
     </div>
     )
 }

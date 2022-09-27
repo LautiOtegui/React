@@ -9,13 +9,13 @@ import {
 import NotFound from './components/NotFound';
 import Cart from './containers/CartContainer';
 import './App.css'
-import ShopProvider from './context/ShopProvider';
+import { CartProvider } from '../src/context/CartContext';
 
 function App() {
 
 
   return (
-  <ShopProvider>
+  <CartProvider>
     <BrowserRouter>
       <NavBar />      
       <Routes>
@@ -26,7 +26,7 @@ function App() {
         <Route path="*" element={<NotFound/>}/>
       </Routes>
     </BrowserRouter>
-  </ShopProvider>
+  </CartProvider>
   );
 }
 export default App;

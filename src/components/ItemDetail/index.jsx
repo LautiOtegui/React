@@ -1,45 +1,49 @@
 import React, { useState } from "react";
-import ItemCount from '../ItemCount'
 import { useNavigate } from "react-router-dom";
-import './style.css'
-import { Shop } from "../../context/ShopProvider";
-import { useContext } from "react";
+import { useCart } from "../../context/CartContext";
+import ItemCount from "../ItemCount";
 
 const ItemDetail = ({ product }) => {
-    const [qty, setQty] = useState(0);
-    const navigate = useNavigate();
+    const [count, setCount] = useState(1);
+    const [compra, setCompra] = useState(false);
+    const { name, price, stock, img, id } = product;
+    const navegar = useNavigate();
+    const { addItem } = useCart();
 
-    const addCart = (quantity) => {
-        setQty(quantity);
+    const onAdd = () => {
+    let purchase = {
+        id,
+        name,
+        price,
+        stock,
+        img,
+        quantity: count,
     };
+    setCompra(true);
 
-    const {addItem} = useContext(Shop);
+    addItem(purchase);
 
-    const handleFinish = () => {
-        const productToSave = {...product, quantity: qty}
-        addItem(productToSave)
-        navigate("/cart");
     };
-
-    console.log(qty);
 
     return (
-        <div className="detail-container">
-            <img
-                className="detail-img"
-                src={product.image}
-                alt="product-detail"
-            />
-            <div className="detail-subcontainer">
-                <h1>{product.title}</h1>
-                {qty ? (
-                    <button onClick={handleFinish}>Finalizar compra</button>
-                ) : (
-                    <ItemCount stock={10} initial={1} onAdd={addCart} />
-                )}
+        
+            <div className="detail-container">
+                <img
+                    className="detail-img"
+                    src={product.image}width ="200em" height="300em"
+                    alt="product-detail"
+                />
+                <div className="detail-subcontainer">
+                    <h1>{product.title}</h1>
+                    { !compra 
+        ? <ItemCount stock={stock} initial={1} onAdd={onAdd} count={count} setCount={setCount}/>
+        : <div style={{display:'flex', justifyContent:'space-around', alignItems:'center'}}>
+            <button className="btn btn-warning" onClick={()=>navegar('/')}>Seguir Comprando</button>
+            <button className="btn btn-info" onClick={()=>navegar('/cart')}>Ir al carrito</button>
+            </div>}
+                </div>
             </div>
-        </div>
-    );
-};
+        )
+    };
 
 export default ItemDetail;
