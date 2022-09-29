@@ -11,10 +11,12 @@ import Cart from './containers/CartContainer';
 import './App.css'
 import { CartProvider } from '../src/context/CartContext';
 
+
 function App() {
 
 
   return (
+
   <CartProvider>
     <BrowserRouter>
       <NavBar />      
