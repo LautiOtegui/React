@@ -10,6 +10,7 @@ import NotFound from './components/NotFound';
 import Cart from './containers/CartContainer';
 import './App.css'
 import { CartProvider } from '../src/context/CartContext';
+import Checkout from './components/checkout';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/detail/:productId" element={<ItemDetailContainer/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="*" element={<NotFound/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
       </Routes>
     </BrowserRouter>
   </CartProvider>
