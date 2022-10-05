@@ -17,3 +17,7 @@
         align-items: flex-start;
         justify-content: flex-start;
     }
+
+    button.btn.btn-warning{
+        width: 8rem;
+    }

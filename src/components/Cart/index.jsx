@@ -13,7 +13,7 @@ return (
     <div>
     {
         !cart.length 
-        ?<div>
+        ?<div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
             <h2>Tu carrito esta vacio!</h2>
             <h4>Te invitamos a ver nuestros productos</h4>
             <button className='btn btn-success' onClick={()=>navegar('/')}>Ir a comprar</button>

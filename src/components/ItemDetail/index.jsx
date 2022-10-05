@@ -31,7 +31,7 @@ const ItemDetail = ({ product }) => {
             <div className="detail-container">
                 <img
                     className="detail-img"
-                    src={product.image}width ="200em" height="300em"
+                    src={product.image}width ="250px" height="250px"
                     alt="product-detail"
                 />
                 <div className="detail-subcontainer">
@@ -39,7 +39,7 @@ const ItemDetail = ({ product }) => {
                     { !compra 
         ? <ItemCount stock={stock} initial={1} onAdd={onAdd} count={count} setCount={setCount}/>
         : <div style={{display:'flex', justifyContent:'space-around', alignItems:'center'}}>
-            <button className="btn btn-warning" onClick={()=>navegar('/')}>Seguir Comprando</button>
+            <button style={{width:'8rem'}} className="btn btn-warning" onClick={()=>navegar('/')}>Seguir Comprando</button>
             <button className="btn btn-info" onClick={()=>navegar('/cart')}>Ir al carrito</button>
             </div>}
                 </div>

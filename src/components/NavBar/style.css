@@ -10,13 +10,15 @@
 ul{
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     padding-top: 5rem;
+    margin-bottom: 9rem;
 }
 ul li{
     list-style: none;
     font-size: 1.3rem;
     font-weight: 600;
+    color: black;
 }
 .logo_nav{
     width: 70px;
@@ -29,4 +31,11 @@ ul li{
 button{
     width: 30px;
     height: 30px;
+}
+a{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
 }

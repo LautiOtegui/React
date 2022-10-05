@@ -7,12 +7,23 @@
     cursor: pointer;
 }
 .less-button{
+    width: 2rem;
+    height: 2rem;
     position: relative;
+    left: 1.8rem;
     font-weight: 900;
     cursor: pointer;
 }
 .more-button{
+    width: 2rem;
+    height: 2rem;
     position: relative;
+    left: 1.8rem;
     font-weight: 900;
     cursor: pointer;
+}
+
+.count{
+    position: relative;
+    left: 1.8rem;
 }
